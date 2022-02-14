@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Game : MonoBehaviour
 {
-
     public Text ui;
+    
     public void Increment()
     {
         GameManager.money += GameManager.multiplier;
@@ -21,6 +21,7 @@ public class Game : MonoBehaviour
             PlayerPrefs.SetInt("money", GameManager.money);
             PlayerPrefs.SetInt("multiplier", GameManager.multiplier);
         }
+        
         if (num == 2 && GameManager.money >= 125)
         {
             GameManager.multiplier += 10;
@@ -28,6 +29,7 @@ public class Game : MonoBehaviour
             PlayerPrefs.SetInt("money", GameManager.money);
             PlayerPrefs.SetInt("multiplier", GameManager.multiplier);
         }
+        
         if (num == 3 && GameManager.money >= 1500)
         {
             GameManager.multiplier += 100;
